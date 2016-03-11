@@ -12,7 +12,12 @@
 ;(set-variable (quote scheme-program-name) "stk")
 
 (add-to-list 'load-path "~/.emacs.d/")
-(load "~/temp/lisp_study/test.el")
+(load-file "~/.emacs.d/buffer-move.el")
+(require 'buffer-move)
+(global-set-key (kbd "C-c <up>")     'buf-move-up)                                                                                                                                                                                                                         
+(global-set-key (kbd "C-c <down>")   'buf-move-down)                                                                                                                                                                                                                       
+(global-set-key (kbd "C-c <left>")   'buf-move-left)                                                                                                                                                                                                                       
+(global-set-key (kbd "C-c <right>")  'buf-move-right)
 
 (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
          (let* ((my-lisp-dir "~/elisp/")
