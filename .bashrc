@@ -122,7 +122,7 @@ alias _grxml=myfilefindgrep_xml
 
 myfilefindgrep_all()
 {
-    find . -name '*' -print0 | xargs -0 grep --color -n $1
+    find . -name '*' -type f -print0 | xargs -0 grep --color -n $1
 }
 alias _gra=myfilefindgrep_all
 
@@ -142,6 +142,12 @@ myGitLogging()
 	git log --pretty=oneline --grep $1
 }
 alias _gl=myGitLogging
+
+myFileCountInDir()
+{
+    ls -R $1 | wc -l
+}
+alias _cntF=myFileCountInDir
 
 whereSrc()
 {
@@ -216,15 +222,15 @@ export SBCL_HOME=~/sukerLisp/sbcl/lib/sbcl
 alias crash_w7='crash --rawdump DDRCS0.BIN@0x0-0x20000000,DDRCS1.BIN@0x20000000-0x20000000 -p 4096 -m phys_base=0x00000 --no_panic --smp vmlinux'
 alias crash_y25='crash --rawdump DDRCS0.BIN@0x0-0x20000000 -p 4096 -m phys_base=0x00000 --no_panic --smp vmlinux'
 alias crash_cy='crash --rawdump DDRCS0.BIN@0x80000000-0x3fffffff -p 4096 -m phys_base=0x80000000 --no_panic --smp vmlinux'
-alias c8c8='quota -us choonghyun.jeon'
-alias c8='python ~/sukerScripts/main.py'
-alias c8add='cd ~/sukerScripts';ls -al
+alias _qu='quota -us suker'
+alias _auto='python ~/sukerGitHub/sukerPython/sukerScripts/main.py'
+alias _add='cd ~/sukerScripts';ls -al
 alias makeEtags='find . -name "*.[chCHsS]" -print | xargs etags -a -o TAGS'
-alias c8c8c8='du -sh *'
 
 #bind CTRL+UP with 'cd ..'
 bind '"\e[1;5A":"cd ..\C-m"' 2> /dev/null
 bind '"\eOA":"cd ..\C-m"' 2> /dev/null
 
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+#export PATH=$JAVA_HOME/bin:$PATH
