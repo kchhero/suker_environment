@@ -1,24 +1,22 @@
 [global_config]
-  tab_position = bottom
-  handle_size = 0
   focus = system
+  handle_size = 3
+  tab_position = bottom
 [keybindings]
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    use_system_font = False
-    background_darkness = 0.8
-    background_type = transparent
-    background_image = None
-    show_titlebar = False
-    font = 나눔고딕코딩 Bold 11
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
       size = 1500, 1300
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_image = None
+    font = 나눔고딕코딩 Bold 11
+    scrollbar_position = hidden
+    use_system_font = False
