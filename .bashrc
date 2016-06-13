@@ -233,28 +233,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-LS_COLORS='no=00:fi=00:di=01;35:ln=01;31:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=32;42:st=37;44:ex=01;33:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:';
-
-export LS_COLORS
-
-export CRASH_EXTENSIONS=~/bin/crash
-export PATH=$HOME/bin/crash:$PATH
-export SBCL_HOME=~/sukerLisp/sbcl/lib/sbcl
-
-#CRASH_EXTENSIONS=~/bin/crash
-#PATH=$PATH:$CRASH_EXTENSIONS
-alias crash_w7='crash --rawdump DDRCS0.BIN@0x0-0x20000000,DDRCS1.BIN@0x20000000-0x20000000 -p 4096 -m phys_base=0x00000 --no_panic --smp vmlinux'
-alias crash_y25='crash --rawdump DDRCS0.BIN@0x0-0x20000000 -p 4096 -m phys_base=0x00000 --no_panic --smp vmlinux'
-alias crash_cy='crash --rawdump DDRCS0.BIN@0x80000000-0x3fffffff -p 4096 -m phys_base=0x80000000 --no_panic --smp vmlinux'
 alias _qu='quota -us suker'
 alias _auto='python ~/sukerGitHub/sukerPython/sukerScripts/main.py'
 alias _add='cd ~/sukerScripts';ls -al
 alias makeEtags='find . -name "*.[chCHsS]" -print | xargs etags -a -o TAGS'
-
-#bind CTRL+UP with 'cd ..'
-bind '"\e[1;5A":"cd ..\C-m"' 2> /dev/null
-bind '"\eOA":"cd ..\C-m"' 2> /dev/null
-
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin
+export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
+
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
+
+
