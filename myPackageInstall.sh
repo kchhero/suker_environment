@@ -1,12 +1,16 @@
 sudo apt-get install terminator
 
+sudo apt-get install git dkms build-essential libtool autoconf unrar libncurses5-dev python subversion tftpd-hpa tftp-hpa nfs-kernel-server 
+sudo apt-get install lynx curl device-tree-compiler
+
+sudo apt-get install libpciaccess-dev autoconf autogen xutils-dev libtool libpthread-stubs0-dev repo
+sudo apt-get install emacs24 vim putty minicom
+
+sudo apt-get install lib32ncurses5 lib32z1 lib32z1-dev lib32stdc++6
 sudo add-apt-repository ppa:umang/indicator-stickynotes
 sudo apt-get update && sudo apt-get install indicator-stickynotes
+sudo apt-get install ia32-libs
 
-sudo apt-get install git dkms build-essential vim libtool autoconf unrar libncurses5-dev python subversion tftpd-hpa tftp-hpa nfs-kernel-server lynx curl minicom ia32-libs device-tree-compiler
-
-sudo apt-get install libpciaccess-dev autogen xutils-dev libpthread-stubs0-dev repo
 sudo apt install python-pip
 pip install --upgrade pip
-sudo apt-get install emacs24
 #pip install django==1.6
