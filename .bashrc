@@ -160,6 +160,12 @@ myFileCountInDir()
 }
 alias _cntF=myFileCountInDir
 
+mySSHID()
+{
+    xclip -sel clip < ~/.ssh/id_rsa.pub
+}
+alias _getsshid=mySSHID
+
 whereSrc()
 {
     ~/sukerScripts/arm-linux-androideabi-addr2line -e $1 $2
@@ -243,4 +249,4 @@ export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
 
-
+sudo mount /dev/sdb1 /home/suker/sukerSDB
