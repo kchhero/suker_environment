@@ -14,6 +14,9 @@ sudo add-apt-repository ppa:umang/indicator-stickynotes
 sudo apt-get update && sudo apt-get install indicator-stickynotes
 sudo apt-get install ia32-libs
 
+sudo apt install unity-control-center unity-tweak-tool
+
+sudo apt-get install wxglade spyder
 sudo apt install python-pip
 pip install --upgrade pip
 #pip install django==1.6
