@@ -29,5 +29,5 @@ sudo apt install unity-control-center unity-tweak-tool
 #python
 sudo apt-get install wxglade spyder
 sudo apt install python-pip
-pip install --upgrade pip
+pip install --upgrade pip;sudo pip install BeautifulSoup4
 #pip install django==1.6
