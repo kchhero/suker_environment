@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="[\e[32m\u\e[31m@\e[34m\h\e[37m] \e[33m\w\e[m\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -150,7 +151,11 @@ gitc8()
 
 myGitLogging()
 {
+    if [ -z $1 ];then
+	git log --pretty=oneline
+    else
 	git log --pretty=oneline --grep $1
+    fi
 }
 alias _gl=myGitLogging
 
@@ -220,6 +225,13 @@ myTTYUSB0()
 }
 alias _usb0=myTTYUSB0
 
+myTTYUSB1()
+{
+    sudo chown suker:suker /dev/ttyUSB1
+    sudo chmod 755 /dev/ttyUSB1
+}
+alias _usb1=myTTYUSB1
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -244,9 +256,14 @@ alias _auto='python ~/sukerGitHub/sukerPython/sukerScripts/main.py'
 alias _add='cd ~/sukerScripts';ls -al
 alias makeEtags='find . -name "*.[chCHsS]" -print | xargs etags -a -o TAGS'
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin
+export PATH=$PATH:/opt/crosstools/gcc-linaro-aarch64-none-elf-4.8-2014.04_linux/bin/
 export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
+export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabi/bin/
+export PATH=$PATH:/opt/crosstools/arm-eabi-4.8/bin/
+export PATH=$PATH:/opt/poky/2.0.2/sysroots/x86_64-pokysdk-linux/usr/bin/
 
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
 
 sudo mount /dev/sdb1 /home/suker/sukerSDB
+#sudo mount -t cifs //SW-01/suker ~/sukerSMB -o user=suker,password=123,workgroup=WORKGROUP,ip=192.168.1.16,iocharset=utf8
