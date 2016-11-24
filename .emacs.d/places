@@ -1,0 +1,20 @@
+;;; -*- coding: utf-8 -*-
+(("/home/suker/.emacs.d/themes/"
+  (dired-filename . "/home/suker/.emacs.d/themes/tomorrow-night-theme.el"))
+ ("/home/suker/.emacs.d/color-theme-6.6.0/"
+  (dired-filename . "/home/suker/.emacs.d/color-theme-6.6.0/build-stamp"))
+ ("/home/suker/.emacs.d/color-theme-6.6.0/Makefile" . 55)
+ ("/home/suker/.emacs.d/color-theme-6.6.0/color-theme-autoloads.in" . 77)
+ ("/home/suker/.emacs.d/init.el" . 2859)
+ ("/home/suker/.emacs.d/color-theme-6.6.0/themes/"
+  (dired-filename . "/home/suker/.emacs.d/color-theme-6.6.0/themes/color-theme-empty-void.el"))
+ ("/home/suker/.emacs.d/buffer-move.el" . 1984)
+ ("/home/suker/.emacs.d/emacs-for-clojure-book1/"
+  (dired-filename . "/home/suker/.emacs.d/emacs-for-clojure-book1/README.md"))
+ ("/home/suker/.emacs.d/emacs-for-clojure-book1/README.md" . 150)
+ ("/home/suker/"
+  (dired-filename . "/home/suker/.emacs.d"))
+ ("/home/suker/.emacs" . 1405)
+ ("/home/suker/.emacs.d/customizations/"
+  (dired-filename . "/home/suker/.emacs.d/customizations/ui.el"))
+ ("/home/suker/.emacs.d/customizations/ui.el" . 743))

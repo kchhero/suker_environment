@@ -1,0 +1,20 @@
+
+;; ----- smex-history -----
+(
+ color-theme-select
+ save-buffer
+ customize-save-customized
+ load-theme
+ cd
+ df
+ 5x5
+)
+
+;; ----- smex-data -----
+(
+ (load-theme . 7)
+ (color-theme-select . 4)
+ (color-theme-snow . 1)
+ (save-buffer . 2)
+ (customize-save-customized . 1)
+)

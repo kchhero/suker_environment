@@ -1,0 +1,4 @@
+quit
+(defn hello [name] (println (str "hello " name "!")))
+(hello "fuckyou")
+quit

@@ -1,0 +1,30 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/suker/.emacs.d/" . "auto-save-list/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ 
+)
+
+;; ----- ido-work-file-list -----
+(
+ 
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/" (22366 15088 117611 686000) "../" "suker/" "./")
+
+ ("/home/suker/" (22582 19451 715856 86000) ".rnd" "SCALA/" "mkcscope.sh" ".wget-hsts" "kernel_4.4_update_dmesg.txt" ".ssh/" "../" "sukerGitHub/" "myBuild.sh" ".lesshst" ".xsession-errors" ".gconf/" "bin/" ".spyder2-py3/" "AGL_org/" "repoAGL/" "my_ctags.sh" "runOpenGrokIndexing.sh" "Artik7/" "examples.desktop" "windowSwap.el" ".selected_editor" "nsih_avn_ref_usb.txt" "sukerBBHub/" "GENIVI-RCAR/" ".viminfo" "0001-temporary-QT5.6-update.patch" ".spyder2/" "sukerPrivatePrj/" "비디오/" "index.html" ".emacs" "myGitSync.sh" ".presage/" ".bash_history" ".nano/" ".m2/" "pwd" ".remmina/" ".macromedia/" "StandaloneGENIVI/" "공개/" ".vnc/" ".bashrc" "meta-nexell_backup/" ".pki/" ".ICEauthority" "문서/" ".android/" ".vim/" "build.sh" ".gnupg/" "./" "다운로드/" "repoUpload/" ".kdiff3rc" ".cmake/" "usb-downloader" ".gnome2_private/" ".local/" ".scala_history" "getdiff.sh" "7e7de6b6e815f35a79098402e81a5331a9d3ee69.patch" "runRemoteDesktop.sh" ".ipython/" ".qt/" ".dmrc" ".lein/" ".adobe/" ".repo_.gitconfig.json" ".sudo_as_admin_successful" "getRepo.sh" "color-theme-empty-void.el" ".cache/" ".gnome/" ".dircolors" ".mozilla/" "temp/" ".dbus/" "repoDemo/" "YoctoPrj/" "elpa/" ".compiz/" "바탕화면/" ".gitconfig" ".Xauthority" "customizations/" ".sbt/" ".thunderbird/" ".gnome2/" ".designer/" ".vimrc" ".rpmdb/" "sukerSMB/" ".subversion/" ".bash_logout" "사진/" ".ivy2/" ".mykermrc" ".putty/" "kdiff3-0.9.98/" ".repoconfig/" "AGL_latest/" "repoWithYocto/" ".emacs.d/" "음악/" ".config/" "weston.tar.gz" "sukerSDB/" ".bashrc.swp" ".profile" ".xsession-errors.old" "myRepoPart.sh" "템플릿/" "AGL_old/" ".xinputrc")
+
+ ("/home/suker/.emacs.d/auto-save-list/" (22582 19768 491851 880000) ".saves-18346-LGEARND12B9~" ".saves-33232-LGEARND12B9~" ".saves-20195-sukernexell~" ".saves-48247-LGEARND12B9~" ".saves-37363-LGEARND12B9~" ".saves-21452-sukernexell~" "../" ".saves-6455-LGEARND12B9~" ".saves-40378-LGEARND12B9~" ".saves-19402-LGEARND12B9~" ".saves-8192-LGEARND12B9~" ".saves-4143-LGEARND12B9~" ".saves-38652-LGEARND12B9~" ".saves-24466-sukernexell~" ".saves-26659-sukernexell~" ".saves-13263-sukernexell~" ".saves-30608-LGEARND12B9~" ".saves-16651-sukernexell~" ".saves-25858-LGEARND12B9~" ".saves-63100-LGEARND12B9~" ".saves-48814-LGEARND12B9~" ".saves-12403-sukernexell~" ".saves-568-LGEARND12B9~" ".saves-4485-LGEARND12B9~" ".saves-45834-LGEARND12B9~" ".saves-31108-LGEARND12B9~" ".saves-54368-LGEARND12B9~" "./" ".saves-57662-LGEARND12B9~" ".saves-61578-LGEARND12B9~" ".saves-6256-LGEARND12B9~" ".saves-11383-sukernexell~" ".saves-9830-sukernexell~" ".saves-56474-LGEARND12B9~" ".saves-7880-LGEARND12B9~" ".saves-46654-LGEARND12B9~" ".saves-11364-LGEARND12B9~" ".saves-60245-LGEARND12B9~" ".saves-16918-sukernexell~" ".saves-24836-LGEARND12B9~" ".saves-2375-sukernexell~" ".saves-43244-LGEARND12B9~" ".saves-30750-sukernexell~" ".saves-59637-LGEARND12B9~" ".saves-587-LGEARND12B9~" ".saves-23384-LGEARND12B9~" ".saves-2009-sukernexell~" ".saves-64784-LGEARND12B9~" ".saves-51665-LGEARND12B9~" ".saves-58366-LGEARND12B9~" ".saves-56561-LGEARND12B9~" ".saves-20453-LGEARND12B9~" ".saves-38888-LGEARND12B9~" ".saves-16641-sukernexell~" ".saves-20132-LGEARND12B9~" ".saves-39057-LGEARND12B9~" ".saves-23777-sukernexell~" ".saves-10119-LGEARND12B9~")
+
+ ("/home/suker/.emacs.d/" (22582 19686 59852 974000) "config-python-mode.el" "../" "bb-mode.el" "emacs-nav-49/" "cl-lib/" "windowSwap.el" "init.el" "config-defuns.el" "./" "auto-save-list/" "buffer-move.el" "idlwave/" "color-theme-6.6.0/" "elpa/" "customizations/" "config-bindings.el" "init.el.old" "themes/" "emacs-for-clojure-book1/" "libs/" "tutorial/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

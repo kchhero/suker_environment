@@ -33,12 +33,12 @@
 ;	             (setq load-path (cons my-lisp-dir load-path))
 ;		                (normal-top-level-add-subdirs-to-load-path)))
 
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
-(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/themes")
+;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
+;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/themes")
 
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-marine)
+;(require 'color-theme)
+;(color-theme-initialize)
+;(color-theme-marine)
 ;(color-theme-autoloads)
 ;(color-theme-empty-void)
 

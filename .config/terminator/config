@@ -1,13 +1,17 @@
 [global_config]
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   focus = system
   handle_size = 3
   inactive_color_offset = 1.0
   tab_position = bottom
 [keybindings]
+  broadcast_all = <Primary><Shift><Alt>a
+  scaled_zoom = <Primary><Shift><Alt>z
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
+      profile = default
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -22,6 +26,7 @@
     font = 나눔고딕코딩 Bold 11
     foreground_color = "#c3d4c6"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scrollback_lines = 5000
+    scrollback_infinite = True
+    scrollback_lines = 1000
     scrollbar_position = hidden
     use_system_font = False

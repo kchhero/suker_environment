@@ -1,0 +1,1 @@
+("~/.emacs.d/color-theme-6.6.0/")
