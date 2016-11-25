@@ -26,6 +26,11 @@
 (setq auto-mode-alist (cons '("\\.bbclass$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
 
+(add-hook 'sh-mode-hook (lambda () (setq indent-tabs-mode nil)))
+(add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 4)))
+(add-hook 'sh-mode-hook (lambda () (setq sh-indentation 4)))
+(provide 'sh-mode-config)
+
 (load-file "~/.emacs.d/init.el")
 ;(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
 ;         (let* ((my-lisp-dir "~/elisp/")
@@ -33,17 +38,18 @@
 ;	             (setq load-path (cons my-lisp-dir load-path))
 ;		                (normal-top-level-add-subdirs-to-load-path)))
 
-;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
-;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/themes")
+;;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
+;;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/themes")
 
-;(require 'color-theme)
-;(color-theme-initialize)
-;(color-theme-marine)
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(color-theme-marine)
 ;(color-theme-autoloads)
 ;(color-theme-empty-void)
 
-(add-to-list 'load-path "~/.emacs.d/nav/")
-(require 'nav)
+;;(add-to-list 'load-path "~/.emacs.d/nav/")
+;;(require 'nav)
+
 (nav-disable-overeager-window-splitting)
 ;; Optional: set up a quick key to toggle nav
 (global-set-key [f8] 'nav-toggle)
