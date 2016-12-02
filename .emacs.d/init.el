@@ -130,3 +130,11 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+(when (>= emacs-major-version 24)
+   (require 'package)
+     (add-to-list
+         'package-archives
+	    '("melpa" . "http://melpa.org/packages/")
+	       t)
+       (package-initialize))

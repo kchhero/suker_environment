@@ -26,8 +26,8 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-;(load-theme 'tomorrow-night-bright t)
-(load-theme 'tomorrow-night-blue t)
+(load-theme 'tomorrow-night t)
+;(load-theme 'tomorrow-night-blue t)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
