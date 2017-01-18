@@ -43,6 +43,9 @@ For detail, see `comment-dwim'."
 	  )
       (comment-dwim arg)))
 
+;; Don't use hard tabs
+(setq-default indent-tabs-mode nil)
+
 (setq bb-expr-white-space-regexp "[ \t]*")
 (setq bb-function-name-opt-regexp "\\([a-zA-Z0-9_-]*\\)")
 (setq bb-function-name-regexp "\\([a-zA-Z0-9_-]+\\)")

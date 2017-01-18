@@ -15,6 +15,10 @@ sudo apt-get install -y lynx curl device-tree-compiler
 sudo apt-get install -y libpciaccess-dev autoconf autogen xutils-dev libtool libpthread-stubs0-dev repo
 sudo apt-get install -y putty minicom fastboot
 
+#network
+sudo apt-get install -y aptitude cpus
+sudo aptitude install cups
+
 #Yocto
 sudo apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib chrpath socat libsdl1.2-dev xterm lzop
 

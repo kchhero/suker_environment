@@ -25,6 +25,7 @@
 (setq auto-mode-alist (cons '("\\.bbappend$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.bbclass$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\Dockerfile$" . bb-mode) auto-mode-alist))
 
 (add-hook 'sh-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 4)))

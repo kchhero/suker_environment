@@ -11,9 +11,9 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
 
 
 ;; Load and activate emacs packages. Do this first so that the
@@ -131,10 +131,10 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
-(when (>= emacs-major-version 24)
-   (require 'package)
-     (add-to-list
-         'package-archives
-	    '("melpa" . "http://melpa.org/packages/")
-	       t)
-       (package-initialize))
+;;(when (>= emacs-major-version 24)
+;;   (require 'package)
+;;     (add-to-list
+;;         'package-archives
+;;	    '("melpa" . "http://melpa.org/packages/")
+;;	       t)
+;;       (package-initialize))

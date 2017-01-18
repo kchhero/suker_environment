@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="[\e[32m\u\e[31m@\e[34m\h\e[37m] \e[33m\w\e[m\$ "
+    PS1="[\e[32m\u\e[31m@\e[34m\h\e[37m] \e[33m\w\e[m\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -94,7 +94,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias gr='grep -n -i -r'
 alias gitpatch='git diff --no-prefix > '
-alias ee='emacs -nw'
+alias ee='env TERM=xterm-256color emacs -nw'
+#alias ee='emacs -nw'
 
 myfilefind()
 {
@@ -134,7 +135,7 @@ alias _grxml=myfilefindgrep_xml
 
 myfilefindgrep_all()
 {
-    find . -name '*' -type f -print0 | xargs -0 grep --color -n $1
+    find . -name '*' -type f -print0 | xargs -0 grep --color -n $1 --exclude-dir=$2
 }
 alias _gra=myfilefindgrep_all
 
@@ -231,6 +232,10 @@ myTTYUSB1()
     sudo chmod 755 /dev/ttyUSB1
 }
 alias _usb1=myTTYUSB1
+
+# ---- suker keybinding -----
+# <F8> run ~/asdf.sh
+bind '"\e[19": "~/asdf.sh\n"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
