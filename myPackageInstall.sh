@@ -40,6 +40,11 @@ pip install --upgrade pip;sudo pip install BeautifulSoup4
 sudo apt-get install -y mongodb
 sudo pip install pymongo
 
+#blog
+sudo gem install jekyll
+sudo gem update --system
+sudo gem install jekyll-sitemap
+
 #mysql
 #sudo apt-get install -y mysql-client
 #sudo apt-get install -y mysql-server
