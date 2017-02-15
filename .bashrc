@@ -10,7 +10,9 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+#HISTCONTROL=ignoreboth
+HISTCONTROL=erasedups
+
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -223,6 +225,8 @@ myTTYUSB0()
 {
     sudo chown suker:suker /dev/ttyUSB0
     sudo chmod 755 /dev/ttyUSB0
+    sed -i "/set line \/dev/d" ~/.mykermrc
+    echo "set line /dev/ttyUSB0" >> ~/.mykermrc
 }
 alias _usb0=myTTYUSB0
 
@@ -230,8 +234,19 @@ myTTYUSB1()
 {
     sudo chown suker:suker /dev/ttyUSB1
     sudo chmod 755 /dev/ttyUSB1
+    sed -i "/set line \/dev/d" ~/.mykermrc
+    echo "set line /dev/ttyUSB1" >> ~/.mykermrc
 }
 alias _usb1=myTTYUSB1
+
+myTTYS0()
+{
+    sudo chown suker:suker /dev/ttyS0
+    sudo chmod 755 /dev/ttyS0
+    sed -i "/set line \/dev/d" ~/.mykermrc
+    echo "set line /dev/ttyS0" >> ~/.mykermrc
+}
+alias _s0=myTTYS0
 
 # ---- suker keybinding -----
 # <F8> run ~/asdf.sh
@@ -260,12 +275,20 @@ alias _qu='quota -us suker'
 alias _auto='python ~/sukerGitHub/sukerPython/sukerScripts/main.py'
 alias _add='cd ~/sukerScripts';ls -al
 alias makeEtags='find . -name "*.[chCHsS]" -print | xargs etags -a -o TAGS'
+alias sw2servercon='ssh -X sw2@192.168.1.15'
+
+export HISTCONTROL=ignoredups
+
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin
 export PATH=$PATH:/opt/crosstools/gcc-linaro-aarch64-none-elf-4.8-2014.04_linux/bin/
 export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabi/bin/
 export PATH=$PATH:/opt/crosstools/arm-eabi-4.8/bin/
-export PATH=$PATH:/opt/poky/2.0.2/sysroots/x86_64-pokysdk-linux/usr/bin/
+#export PATH=$PATH:/opt/poky/2.1.1/sysroots/x86_64-pokysdk-linux/usr/bin/
+export PATH=$PATH:/opt/poky/2.1.2-X11/sysroots/cortexa9hf-neon-poky-linux-gnueabi/usr/bin
+
+#myapp
+export PATH=$PATH:~/bin
 
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
