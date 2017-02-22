@@ -226,7 +226,7 @@ myTTYUSB0()
     sudo chown suker:suker /dev/ttyUSB0
     sudo chmod 755 /dev/ttyUSB0
     sed -i "/set line \/dev/d" ~/.mykermrc
-    echo "set line /dev/ttyUSB0" >> ~/.mykermrc
+    echo "set line /dev/ttyUSB0" | cat - ~/.mykermrc > kermit_temp.txt && mv kermit_temp.txt ~/.mykermrc
 }
 alias _usb0=myTTYUSB0
 
@@ -235,7 +235,7 @@ myTTYUSB1()
     sudo chown suker:suker /dev/ttyUSB1
     sudo chmod 755 /dev/ttyUSB1
     sed -i "/set line \/dev/d" ~/.mykermrc
-    echo "set line /dev/ttyUSB1" >> ~/.mykermrc
+    echo "set line /dev/ttyUSB1" | cat - ~/.mykermrc > kermit_temp.txt && mv kermit_temp.txt ~/.mykermrc
 }
 alias _usb1=myTTYUSB1
 
@@ -244,7 +244,7 @@ myTTYS0()
     sudo chown suker:suker /dev/ttyS0
     sudo chmod 755 /dev/ttyS0
     sed -i "/set line \/dev/d" ~/.mykermrc
-    echo "set line /dev/ttyS0" >> ~/.mykermrc
+    echo "set line /dev/ttyS0" | cat - ~/.mykermrc > kermit_temp.txt && mv kermit_temp.txt ~/.mykermrc
 }
 alias _s0=myTTYS0
 
@@ -290,8 +290,14 @@ export PATH=$PATH:/opt/poky/2.1.2-X11/sysroots/cortexa9hf-neon-poky-linux-gnueab
 #myapp
 export PATH=$PATH:~/bin
 
+#clojure
+#export CLOJURE_HOME=/usr/local/clojure-1.8.0
+#export CLASSPATH=$CLASSPATH:/usr/local/clojure-1.8.0
+
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
 
 sudo mount /dev/sdb1 /home/suker/sukerSDB
 #sudo mount -t cifs //SW-01/suker ~/sukerSMB -o user=suker,password=123,workgroup=WORKGROUP,ip=192.168.1.16,iocharset=utf8
+#sudo mount -vt //192.168.1.16/suker ~/sukerSMB -o user=suker,pass=cndgus123 -t auto
+#sudo mount.cifs -o user=suker,password=cndgus123 //192.168.1.16/suker ~/sukerSMB
