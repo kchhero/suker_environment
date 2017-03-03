@@ -36,11 +36,15 @@ sudo apt install -y python-pip
 pip install --upgrade pip;sudo pip install BeautifulSoup4
 #pip install django==1.6
 
+#hangul
+sudo apt-get install -y fcitx-hangul
+
 #mongodb
 sudo apt-get install -y mongodb
 sudo pip install pymongo
 
 #blog
+sudo apt install -y ruby ruby-dev
 sudo gem install jekyll
 sudo gem update --system
 sudo gem install jekyll-sitemap
@@ -48,4 +52,7 @@ sudo gem install jekyll-sitemap
 #mysql
 #sudo apt-get install -y mysql-client
 #sudo apt-get install -y mysql-server
+
+git config --global user.email "suker@nexell.co.kr"
+git config --global user.name "suker"
 

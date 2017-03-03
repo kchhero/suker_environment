@@ -60,7 +60,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="[\e[32m\u\e[31m@\e[34m\h\e[37m] \e[33m\w\e[m\n\$ "
+    PS1="[\e[32m\u\e[31m@\e[32m\h\e[32m] \e[32m\w\e[m\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -297,7 +297,7 @@ export PATH=$PATH:~/bin
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export PATH=$JAVA_HOME/bin:$PATH
 
-sudo mount /dev/sdb1 /home/suker/sukerSDB
+#sudo mount /dev/sdb1 /home/suker/sukerSDB
 #sudo mount -t cifs //SW-01/suker ~/sukerSMB -o user=suker,password=123,workgroup=WORKGROUP,ip=192.168.1.16,iocharset=utf8
 #sudo mount -vt //192.168.1.16/suker ~/sukerSMB -o user=suker,pass=cndgus123 -t auto
 #sudo mount.cifs -o user=suker,password=cndgus123 //192.168.1.16/suker ~/sukerSMB
