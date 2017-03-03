@@ -30,6 +30,9 @@ sudo apt-get install -y ia32-libs
 #desktop
 sudo apt install -y unity-control-center unity-tweak-tool
 
+#etc
+sudo apt-get install -y cifs-utils
+
 #python
 sudo apt-get install -y wxglade spyder
 sudo apt install -y python-pip
