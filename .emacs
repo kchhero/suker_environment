@@ -11,6 +11,15 @@
 (setq scheme-program-name "scm")
 ;(set-variable (quote scheme-program-name) "stk")
 
+;SUKER: python 
+;reference : https://github.com/jorgenschaefer/elpy
+;Then run M-x package-refresh-contents to load the contents of the new repository, and M-x package-install RET elpy RET to install elpy.
+(require 'package)
+(add-to-list 'package-archives
+              '("elpy" . "http://jorgenschaefer.github.io/packages/"))
+(package-initialize)
+(elpy-enable)
+
 (add-to-list 'load-path "~/.emacs.d/")
 (load-file "~/.emacs.d/buffer-move.el")
 (require 'buffer-move)

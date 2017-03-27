@@ -31,7 +31,7 @@ sudo apt-get install -y ia32-libs
 sudo apt install -y unity-control-center unity-tweak-tool
 
 #etc
-sudo apt-get install -y cifs-utils
+sudo apt-get install -y cifs-utils tree screen
 
 #python
 sudo apt-get install -y wxglade spyder
