@@ -69,7 +69,7 @@
 ;; M-x mml-attach-file
 ;; M-x message-send
 (setq mail-host-address "gmail.com")
-(setq user-mail-address "suker@nexell.co.kr")
+(setq user-mail-address "kchhero@gmail.com")
 (setq send-mail-function (quote smtpmail-send-it))
 (setq smtpmail-smtp-server "smtp.gmail.com")
 (setq smtpmail-smtp-service 587)

@@ -39,6 +39,10 @@ sudo apt install -y python-pip
 pip install --upgrade pip;sudo pip install BeautifulSoup4
 #pip install django==1.6
 
+#Jenkins Plugin develop
+sudo apt-get install -y maven openjdk-8-jdk 
+echo "export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/" >> ~/.bashrc
+
 #hangul
 sudo apt-get install -y fcitx-hangul
 
@@ -59,3 +63,7 @@ sudo gem install jekyll-sitemap
 git config --global user.email "suker@nexell.co.kr"
 git config --global user.name "suker"
 
+#MachineLearning
+sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
+sudo apt-get install -y nvidia-modprobe
+sudo service nvidia-docker restart
