@@ -1,0 +1,1 @@
+(define-package "gmail-message-mode" "1.4" "A major-mode for editing gmail messages using markdown syntax." '((ham-mode "1.0")) :url "http://github.com/Bruce-Connor/gmail-message-mode" :keywords '("mail" "convenience" "emulation"))

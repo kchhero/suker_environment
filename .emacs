@@ -1,25 +1,59 @@
-;;------------SCHEME-----------------;;
-; Always do syntax highlighting
-(global-font-lock-mode 1)
-
-;;; Also highlight parens
-(setq show-paren-delay 0
-      show-paren-style 'parenthesis)
-(show-paren-mode 1)
-
-;;; This is the binary name of my scheme implementation
-(setq scheme-program-name "scm")
-;(set-variable (quote scheme-program-name) "stk")
-
-;SUKER: python 
-;reference : https://github.com/jorgenschaefer/elpy
-;Then run M-x package-refresh-contents to load the contents of the new repository, and M-x package-install RET elpy RET to install elpy.
-(require 'package)
+(require 'package) ;; You might already have this line
 (add-to-list 'package-archives
-              '("elpy" . "http://jorgenschaefer.github.io/packages/"))
-(package-initialize)
+              '("melpa" . "https://stable.melpa.org/packages/"))
+(when (< emacs-major-version 24)
+   ;; For important compatibility libraries like cl-lib
+      (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   (vector "#c5c8c6" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#373b41"))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-blue)))
+ '(custom-safe-themes
+   (quote
+    ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(fci-rule-color "#373b41")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#cc6666")
+     (40 . "#de935f")
+     (60 . "#f0c674")
+     (80 . "#b5bd68")
+     (100 . "#8abeb7")
+     (120 . "#81a2be")
+     (140 . "#b294bb")
+     (160 . "#cc6666")
+     (180 . "#de935f")
+     (200 . "#f0c674")
+     (220 . "#b5bd68")
+     (240 . "#8abeb7")
+     (260 . "#81a2be")
+     (280 . "#b294bb")
+     (300 . "#cc6666")
+     (320 . "#de935f")
+     (340 . "#f0c674")
+     (360 . "#b5bd68"))))
+ '(vc-annotate-very-old-color nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+;;----------------------------- suker customize ---------------------------
+;; elpy enable
 (elpy-enable)
 
+;; buffer move, window move
 (add-to-list 'load-path "~/.emacs.d/")
 (load-file "~/.emacs.d/buffer-move.el")
 (require 'buffer-move)
@@ -28,6 +62,7 @@
 (global-set-key (kbd "C-c <left>")   'buf-move-left)
 (global-set-key (kbd "C-c <right>")  'buf-move-right)
 
+;; for yocto recipe edit mode 
 (load-file "~/.emacs.d/bb-mode.el")
 (setq auto-mode-alist (cons '("\\.bb$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.inc$" . bb-mode) auto-mode-alist))
@@ -36,57 +71,6 @@
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\Dockerfile$" . bb-mode) auto-mode-alist))
 
-(add-hook 'sh-mode-hook (lambda () (setq indent-tabs-mode nil)))
-(add-hook 'sh-mode-hook (lambda () (setq sh-basic-offset 4)))
-(add-hook 'sh-mode-hook (lambda () (setq sh-indentation 4)))
-(provide 'sh-mode-config)
-
-(load-file "~/.emacs.d/init.el")
-;(if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-;         (let* ((my-lisp-dir "~/elisp/")
-;		              (default-directory my-lisp-dir))
-;	             (setq load-path (cons my-lisp-dir load-path))
-;		                (normal-top-level-add-subdirs-to-load-path)))
-
-;;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
-;;(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0/themes")
-
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(color-theme-marine)
-;(color-theme-autoloads)
-;(color-theme-empty-void)
-
-;;(add-to-list 'load-path "~/.emacs.d/nav/")
-;;(require 'nav)
-
+;; navi menu on/off
 (nav-disable-overeager-window-splitting)
-;; Optional: set up a quick key to toggle nav
 (global-set-key [f8] 'nav-toggle)
-
-;;nexell setting
-;; C-x m  or  M-x message-mail
-;; M-x mml-attach-file
-;; M-x message-send
-(setq mail-host-address "gmail.com")
-(setq user-mail-address "kchhero@gmail.com")
-(setq send-mail-function (quote smtpmail-send-it))
-(setq smtpmail-smtp-server "smtp.gmail.com")
-(setq smtpmail-smtp-service 587)
-(setq smtpmail-auth-credentials (quote (("smtp.gmail.com" 587 "suker@nexell.co.kr" nil))))
-(setq smtpmail-starttls-credentials (quote (("smtp.gmail.com" 587 nil nil))))
-(setq user-full-name "choonghyun Jeon")
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "smtp.gmail.com")
- '(smtpmail-smtp-service 25))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
