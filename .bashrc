@@ -60,7 +60,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="[\e[32m\u\e[31m@\e[32m\h\e[32m] \e[32m\w\e[m\n\$ "
+    PS1="[\e[33m\u\e[31m@\e[33m\h\e[32m] \e[32m\w\e[m\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -251,6 +251,7 @@ alias _s0=myTTYS0
 # ---- suker keybinding -----
 # <F8> run ~/asdf.sh
 bind '"\e[19": "~/asdf.sh\n"'
+bind '"\e[21": "python ~/sukerGitHub/suker_python_project/sukerStock/stockMain.py&\n"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -279,6 +280,7 @@ alias sw2servercon='ssh -X sw2@192.168.1.15'
 
 export HISTCONTROL=ignoredups
 
+export PYTHONPATH=$HOME/.emacs.d/elpa/elpy-1.14.1/
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_aarch64-linux-gnu/bin
 export PATH=$PATH:/opt/crosstools/gcc-linaro-aarch64-none-elf-4.8-2014.04_linux/bin/
 export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
