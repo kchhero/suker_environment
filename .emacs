@@ -68,6 +68,8 @@
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\Dockerfile$" . bb-mode) auto-mode-alist))
 
+(global-set-key (kbd "M-p") 'other-window)
+
 ;; navi menu on/off
 ;; https://github.com/ancane/emacs-nav/blob/master/nav.el
 (add-to-list 'load-path "~/.emacs.d/emacs-nav-49/")
@@ -88,4 +90,8 @@
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
+
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 ;;------------------------ suker customize End ---------------------------
