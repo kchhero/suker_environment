@@ -43,3 +43,7 @@ sudo service nvidia-docker restart
 #network
 sudo apt-get install -y aptitude cpus
 sudo aptitude install cups
+
+#virtualbox
+sudo apt-get install -y virtualbox
+sudo apt-get install -y virtualbox-ext-pack
