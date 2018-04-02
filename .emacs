@@ -94,4 +94,9 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
+;; python assist
+(load-file "~/.emacs.d/elpa/jedi-0.2.7/jedi.el")
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)                 ; optional
 ;;------------------------ suker customize End ---------------------------

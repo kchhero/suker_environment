@@ -16,5 +16,4 @@ sudo apt-get install -y aptitude cpus
 sudo aptitude install cups
 
 #virtualbox
-sudo apt-get install -y virtualbox
-sudo apt-get install -y virtualbox-ext-pack
+#http://ubuntuhandbook.org/index.php/2017/10/virtualbox-reached-5-2-major-release-how-to-install/
