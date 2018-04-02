@@ -14,11 +14,13 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#c5c8c6" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#373b41"))
+ '(column-number-mode t)
  '(custom-enabled-themes (quote (sanityinc-tomorrow-blue)))
  '(custom-safe-themes
    (quote
-    ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+    ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(fci-rule-color "#373b41")
+ '(show-paren-mode t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -46,7 +48,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
 
 
 ;------------------------- suker customize start ---------------------------
@@ -94,4 +96,33 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
+(setq-default mode-line-buffer-identification
+              (let ((orig  (car mode-line-buffer-identification)))
+                `(:eval (cons (concat ,orig (abbreviate-file-name default-directory))
+                              (cdr mode-line-buffer-identification)))))
+
+(setq-default line-spacing 0)
+
+;; (when window-system (set-face-font 'default "Avenir Next LT Pro-11"))
+;(set-fontset-font "fontset-default" '(#x1100 . #xffdc) '("MunanCoding" . "iso10646-1"))
+;(setq face-font-rescale-alist
+;       '((".*MunanCoding.*" . 1.1)))
+
+(set-language-environment "Korean")
+(prefer-coding-system 'utf-8)
+(global-set-key (kbd "<Multi_key>") 'toggle-input-method)
+(global-set-key (kbd "<kana>") 'toggle-input-method)
+
+(load-file "~/.emacs.d/suker-test.el")
+
+(setq default-frame-alist
+      '((top . 0) (left . 2560) (width . 152) (height . 72)
+        ))
+
+(setq-default c-basic-offset 4)
+
+;emacs  backup file customize
+(setq backup-directory-alist '(("" . "~/tmp/emacs-backup/")))
+
 ;;------------------------ suker customize End ---------------------------
+
