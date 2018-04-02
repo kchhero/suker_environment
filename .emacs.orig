@@ -96,11 +96,18 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
+<<<<<<< HEAD
 ;; python assist
 (load-file "~/.emacs.d/elpa/jedi-0.2.7/jedi.el")
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)                 ; optional
+=======
+(setq-default mode-line-buffer-identification
+              (let ((orig  (car mode-line-buffer-identification)))
+                `(:eval (cons (concat ,orig (abbreviate-file-name default-directory))
+                              (cdr mode-line-buffer-identification)))))
+
 (setq-default line-spacing 0)
 
 ;; (when window-system (set-face-font 'default "Avenir Next LT Pro-11"))
@@ -124,4 +131,6 @@
 ;emacs  backup file customize
 (setq backup-directory-alist '(("" . "~/tmp/emacs-backup/")))
 
+>>>>>>> b56200aa9e2638ec20b281c4c4f4f5f78733b9c2
 ;;------------------------ suker customize End ---------------------------
+
