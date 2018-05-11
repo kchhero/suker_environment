@@ -80,7 +80,7 @@
 (global-set-key (kbd "<f8>") 'nav-toggle)
 
 ;; python setting
-(load-file "~/.emacs.d/python-init.el")
+;;(load-file "~/.emacs.d/python-init.el")
 (require 'elpy)
 (elpy-enable)
 
@@ -96,11 +96,11 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-;; python assist
-(load-file "~/.emacs.d/elpa/jedi-0.2.7/jedi.el")
+(setq-default mode-line-buffer-identification
+              (let ((orig  (car mode-line-buffer-identification)))
+                `(:eval (cons (concat ,orig (abbreviate-file-name default-directory))
+                              (cdr mode-line-buffer-identification)))))
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)                 ; optional
 (setq-default line-spacing 0)
 
 ;; (when window-system (set-face-font 'default "Avenir Next LT Pro-11"))
@@ -124,4 +124,12 @@
 ;emacs  backup file customize
 (setq backup-directory-alist '(("" . "~/tmp/emacs-backup/")))
 
+;; python assist
+(load-file "~/.emacs.d/elpa/jedi-0.2.7/jedi.el")
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)                 ; optional
+
+(windmove-default-keybindings)
 ;;------------------------ suker customize End ---------------------------
+

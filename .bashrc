@@ -104,6 +104,12 @@ myfilefind()
 	find . -name $1 -type f
 }
 alias fnf=myfilefind
+
+myPyuicConvert()
+{
+	pyuic5 -x *.ui -o $1
+}
+alias pyc8=myPyuicConvert
 	
 mydirfind()
 {
@@ -239,6 +245,15 @@ myTTYUSB1()
 }
 alias _usb1=myTTYUSB1
 
+myTTYUSB2()
+{
+    sudo chown suker:suker /dev/ttyUSB2
+    sudo chmod 755 /dev/ttyUSB2
+    sed -i "/set line \/dev/d" ~/.mykermrc
+    echo "set line /dev/ttyUSB2" | cat - ~/.mykermrc > kermit_temp.txt && mv kermit_temp.txt ~/.mykermrc
+}
+alias _usb2=myTTYUSB2
+
 myTTYS0()
 {
     sudo chown suker:suker /dev/ttyS0
@@ -251,7 +266,7 @@ alias _s0=myTTYS0
 # ---- suker keybinding -----
 # <F8> run ~/asdf.sh
 bind '"\e[19": "~/asdf.sh\n"'
-bind '"\e[21": "python ~/sukerGitHub/suker_python_project/sukerStock/stockMain.py&\n"'
+bind '"\e[21": "python ~/sukerGitHub/suker_python_project/sukerStock/myFavoriteStock/stockMain.py&\n"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -286,8 +301,11 @@ export PATH=$PATH:/opt/crosstools/gcc-linaro-aarch64-none-elf-4.8-2014.04_linux/
 export PATH=$PATH:/opt/crosstools/arm-cortex_a9-eabi-4.7-eglibc-2.18/bin/
 export PATH=$PATH:/opt/crosstools/gcc-linaro-4.9-2015.05-x86_64_arm-linux-gnueabi/bin/
 export PATH=$PATH:/opt/crosstools/arm-eabi-4.8/bin/
+export PATH=$PATH:/opt/crosstools/gcc-arm-none-eabi-7-2017-q4-major/bin/
 #export PATH=$PATH:/opt/poky/2.1.1/sysroots/x86_64-pokysdk-linux/usr/bin/
 export PATH=$PATH:/opt/poky/2.1.2-X11/sysroots/cortexa9hf-neon-poky-linux-gnueabi/usr/bin
+export PATH=$PATH:/home/suker/riscv-toolchain/bin
+export PATH=$PATH:/home/suker/Qt5.10.1/5.10.1/gcc_64/bin/:/home/suker/Qt5.10.1/Tools/QtCreator/bin/
 
 #myapp
 export PATH=$PATH:~/bin
