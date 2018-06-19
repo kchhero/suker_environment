@@ -44,11 +44,28 @@ RUN apt-get update && apt-get install -y python-pip sudo
 RUN pip install --upgrade pip
 RUN pip install pycrypto
 
-RUN useradd -ms /bin/bash suker
+#RUN useradd -ms /bin/bash suker
 
-USER suker
-WORKDIR /home/suker
+#USER suker
+#WORKDIR /home/suker
+RUN useradd -m suker && echo "suker:suker" | chpasswd && adduser suker sudo
 
 COPY .bashrc /home/suker/
 COPY .dircolors /home/suker/
 COPY .vimrc /home/suker/
+
+RUN git config --global user.email "suker@nexell.co.kr"
+RUN git config --global user.name "choonghyun-Jeon"
+
+# Set the locale
+RUN apt-get install -y locales
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
+#others
+RUN apt-get install -y locales iputils-ping
+
+USER suker
