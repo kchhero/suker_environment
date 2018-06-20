@@ -1,30 +1,28 @@
 [global_config]
-  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  focus = system
-  handle_size = 3
-  inactive_color_offset = 1.0
-  tab_position = bottom
+  enabled_plugins = TerminatorThemes, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = 4
+  inactive_color_offset = 0.88
+  scroll_tabbar = True
 [keybindings]
-  broadcast_all = <Primary><Shift><Alt>a
-  scaled_zoom = <Primary><Shift><Alt>z
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
-      profile = default
+      profile = Monokai dark
       type = Terminal
     [[[window0]]]
       parent = ""
-      size = 1700, 1300
       type = Window
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.91
-    background_image = None
-    font = Monospace 11
-    foreground_color = "#69f4ef"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scrollback_infinite = True
+    cursor_color = "#00ff00"
+    font = Hack 10
+    foreground_color = "#ffffff"
+    palette = "#fbf1c7:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#b57614:#076678:#1f3f71:#427b58:#3c3836"
     scrollback_lines = 1000
-    scrollbar_position = hidden
+  [[Monokai dark]]
+    background_color = "#272822"
+    cursor_color = "#ffffff"
+    foreground_color = "#f8f8f2"
+    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
