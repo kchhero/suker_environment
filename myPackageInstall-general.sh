@@ -17,3 +17,9 @@ sudo aptitude install cups
 
 #virtualbox
 #http://ubuntuhandbook.org/index.php/2017/10/virtualbox-reached-5-2-major-release-how-to-install/
+
+#terminal
+sudo apt-get update
+sudo apt-get install -y terminator
+sudo apt-get install -y guake guake-indicator
+
