@@ -101,7 +101,7 @@ alias ee='env TERM=xterm-256color emacs -nw'
 
 myfilefind()
 {
-	find . -name $1 -type f
+	find . -name $1
 }
 alias fnf=myfilefind
 
@@ -277,6 +277,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -309,6 +313,10 @@ export PATH=$PATH:/home/suker/Qt5.10.1/5.10.1/gcc_64/bin/:/home/suker/Qt5.10.1/T
 
 #myapp
 export PATH=$PATH:~/bin
+
+#RISCV
+export RISCV=~/riscv-toolchain/bin/
+export PATH=$PATH:$RISCV
 
 #clojure
 #export CLOJURE_HOME=/usr/local/clojure-1.8.0

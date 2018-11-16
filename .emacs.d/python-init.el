@@ -2,10 +2,10 @@
   "Use the system python3 for `elpy-mode', `flycheck-mode', and `python-mode'."
   (interactive)
   (setq
-    elpy-rpc-python-command "/usr/bin/python3.5"
+    elpy-rpc-python-command "/usr/bin/python3.6"
     elpy-rpc-pythonpath "/usr/local/lib/python3.5/dist-packages"
-    flycheck-python-flake8-executable "/usr/bin/flake8"
-    python-check-command "/usr/bin/pyflakes3"
+    ;; flycheck-python-flake8-executable "/usr/bin/flake8"
+    ;; python-check-command "/usr/bin/pyflakes3"
     python-shell-interpreter "/usr/bin/ipython3"))
 
 (defun use-python2 ()
@@ -14,8 +14,8 @@
   (setq
     elpy-rpc-python-command "/usr/bin/python2.7"
     elpy-rpc-pythonpath "/usr/local/lib/python2.7/dist-packages"
-    flycheck-python-flake8-executable "/usr/bin/flake8"
-    python-check-command "/usr/bin/pyflakes"
+    ;; flycheck-python-flake8-executable "/usr/bin/flake8"
+    ;; python-check-command "/usr/bin/pyflakes"
     python-shell-interpreter "/usr/bin/ipython"))
 
 (defun toggle-comment ()
@@ -36,3 +36,6 @@
       (line-end-position))))
 
 (use-python2)
+
+(setq python-shell-prompt-detect-failure-warning nil)
+

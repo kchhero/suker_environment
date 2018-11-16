@@ -98,7 +98,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "green-light"
+let g:colors_name = "codeschool"
 hi Comment  term=bold ctermfg=5 guifg=SlateBlue
 hi Keyword term=standout ctermfg=2 guifg=Brown    
 hi Normal guibg=#CAE8F0 guifg=Black

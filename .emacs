@@ -20,6 +20,10 @@
    (quote
     ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(fci-rule-color "#373b41")
+ '(nav-width 25)
+ '(package-selected-packages
+   (quote
+    (dimmer ## web-mode pythonic python-mode python multi-term jedi gmail-message-mode function-args flycheck elpy el-get color-theme-sanityinc-tomorrow clojure-snippets clojure-quick-repls clojure-mode-extra-font-locking clojure-cheatsheet)))
  '(show-paren-mode t)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -81,6 +85,7 @@
 
 ;; python setting
 ;;(load-file "~/.emacs.d/python-init.el")
+
 (require 'elpy)
 (elpy-enable)
 
@@ -119,7 +124,10 @@
       '((top . 0) (left . 2560) (width . 152) (height . 72)
         ))
 
-(setq-default c-basic-offset 4)
+(setq-default tab-width 8)
+(setq tab-width 8)
+(setq-default c-basic-offset 'tab-width)
+;(setq-default c-basic-offset 8)
 
 ;emacs  backup file customize
 (setq backup-directory-alist '(("" . "~/tmp/emacs-backup/")))
@@ -131,5 +139,7 @@
 (setq jedi:complete-on-dot t)                 ; optional
 
 (windmove-default-keybindings)
+
 ;;------------------------ suker customize End ---------------------------
 
+(put 'upcase-region 'disabled nil)
