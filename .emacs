@@ -89,8 +89,11 @@
 (require 'elpy)
 (elpy-enable)
 
-(require 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;; (require 'flycheck)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
+(use-package flycheck
+  :init
+  (global-flycheck-mode))
 
 (require 'function-args)
 (fa-config-default)
@@ -118,7 +121,7 @@
 (global-set-key (kbd "<Multi_key>") 'toggle-input-method)
 (global-set-key (kbd "<kana>") 'toggle-input-method)
 
-(load-file "~/.emacs.d/suker-test.el")
+;;(load-file "~/.emacs.d/suker-test.el")
 
 (setq default-frame-alist
       '((top . 0) (left . 2560) (width . 152) (height . 72)
@@ -140,6 +143,31 @@
 
 (windmove-default-keybindings)
 
+;;(bgex-set-image-default "~/Pictures/a.png" nil)
+
+;;mail setting
+(setq mail-host-address "nexell.co.kr")
+(setq user-mail-address "suker@nexell.co.kr")
+(setq send-mail-function (quote smtpmail-send-it))
+(setq smtpmail-smtp-server "ezsmtp.bizmeka.com")
+(setq smtpmail-smtp-service 587)
+(setq smtpmail-auth-credentials (quote (("ezsmtp.bizmeka.com" 587 "suker@nexell.co.kr" nil))))
+(setq smtpmail-starttls-credentials (quote (("ezsmtp.bizmeka.com" 587 nil nil))))
+(setq user-full-name "choonghyun Jeon")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "ezsmtp.bizmeka.com")
+ '(smtpmail-smtp-service 25))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 ;;------------------------ suker customize End ---------------------------
 
 (put 'upcase-region 'disabled nil)

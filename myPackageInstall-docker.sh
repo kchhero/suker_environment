@@ -11,6 +11,3 @@ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 sudo apt-get install -y nvidia-modprobe
 sudo service nvidia-docker restart
 
-#network
-sudo apt-get install -y aptitude cpus
-sudo aptitude install cups

@@ -60,7 +60,9 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="[\e[33m\u\e[31m@\e[33m\h\e[32m] \e[32m\w\e[m\n\$ "
+    PS1="[\e[92m\u\e[31m@\e[96m\h\e[32m] \e[32m\w\e[m\n\$ "
+    # server or second bash
+    #PS1="[\e[105m\u\e[31m@\e[34m\h\e[32m] \e[33m\w\e[m\n\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi

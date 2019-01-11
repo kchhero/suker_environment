@@ -23,3 +23,9 @@ sudo apt-get update
 sudo apt-get install -y terminator
 sudo apt-get install -y guake guake-indicator
 
+#hangul
+sudo apt-get install -y fcitx-hangul
+
+#emacs and git
+sudo apt install -y git emacs24
+
