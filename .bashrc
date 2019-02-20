@@ -267,8 +267,8 @@ alias _s0=myTTYS0
 
 # ---- suker keybinding -----
 # <F8> run ~/asdf.sh
-bind '"\e[19": "~/asdf.sh\n"'
-bind '"\e[21": "python ~/sukerGitHub/suker_python_project/sukerStock/myFavoriteStock/stockMain.py&\n"'
+bind '"\e[19~": "~/asdf.sh\n"'
+bind '"\e[21~": "python ~/sukerGitHub/suker_python_project/sukerStock/myFavoriteStock/stockMain.py&\n"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
