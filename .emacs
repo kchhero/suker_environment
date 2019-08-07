@@ -129,8 +129,9 @@
 
 (setq-default tab-width 8)
 (setq tab-width 8)
-(setq-default c-basic-offset 'tab-width)
-;(setq-default c-basic-offset 8)
+(setq-default c-basic-offset 4)
+;; (setq c-default-style "gnu"
+;;         c-basic-offset 4)
 
 ;emacs  backup file customize
 (setq backup-directory-alist '(("" . "~/tmp/emacs-backup/")))
