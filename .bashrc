@@ -39,7 +39,8 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+#xterm-color|*-256color) color_prompt=yes;;
+    xterm|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -268,7 +269,7 @@ alias _s0=myTTYS0
 # ---- suker keybinding -----
 # <F8> run ~/asdf.sh
 bind '"\e[19~": "~/asdf.sh\n"'
-bind '"\e[21~": "python ~/sukerGitHub/suker_python_project/sukerStock/myFavoriteStock/stockMain.py&\n"'
+bind '"\e[18~": "python ~/sukerGitHub/suker_python_project/sukerStock/consoleVersion/stockMain.py\n"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

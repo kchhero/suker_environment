@@ -22,3 +22,5 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 eval `dircolors ~/.dircolors`
+
+export PATH="$HOME/.cargo/bin:$PATH"
