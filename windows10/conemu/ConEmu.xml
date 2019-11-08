@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-09-26 17:18:08" build="190714">
+		<key name=".Vanilla" modified="2019-09-27 08:24:29" build="190714">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -141,8 +141,8 @@
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="212"/>
-			<value name="ConWnd Y" type="long" data="122"/>
+			<value name="ConWnd X" type="long" data="391"/>
+			<value name="ConWnd Y" type="long" data="129"/>
 			<value name="LastMonitor" type="string" data="0,0,1920,1019"/>
 			<value name="ConWnd Width" type="dword" data="000000a1"/>
 			<value name="ConWnd Height" type="dword" data="00000030"/>
@@ -314,7 +314,7 @@
 			<value name="OneTabPerGroup" type="hex" data="00"/>
 			<value name="ActivateSplitMouseOver" type="hex" data="01"/>
 			<value name="TabSelf" type="hex" data="01"/>
-			<value name="TabLazy" type="hex" data="01"/>
+			<value name="TabLazy" type="hex" data="00"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabRecent" type="hex" data="01"/>
 			<value name="TabDblClick" type="ulong" data="3"/>
